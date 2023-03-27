@@ -12,8 +12,8 @@ class _HomePageState extends State<HomePage> {
 
   final audioplayer = AudioPlayer();
 
-  Future setAudio({required String path}) async {
-    await audioplayer.setSource(AssetSource(path));
+  Future setAudio({required String path})  {
+    return audioplayer.setSource(AssetSource(path));
   }
 
   @override
