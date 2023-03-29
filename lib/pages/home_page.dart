@@ -28,8 +28,8 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   padding: EdgeInsets.only(top: 50),
                   child: Text(
-                    'Click Photos to get sound',
-                    style: TextStyle(fontSize: 32),
+                    'Tap Photos to get sound of them',
+                    style: TextStyle(fontSize: 27),
                   ),
                 ),
                 Row(
@@ -130,6 +130,42 @@ class _HomePageState extends State<HomePage> {
                           },
                           child: Container(
                             child: Image.asset("assets/images/cow.jpg"),
+                            width: 200,
+                            height: 200,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Container(
+                        child: GestureDetector(
+                          onTap: () async {
+                            await setAudio(path: "sounds/bearroar.mp3");
+                            audioplayer.play(audioplayer.source!);
+                          },
+                          child: Container(
+                            child: Image.asset("assets/images/bear.jpg"),
+                            width: 200,
+                            height: 200,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: GestureDetector(
+                          onTap: () async {
+                            await setAudio(path: "sounds/goatsound.mp3");
+                            audioplayer.play(audioplayer.source!);
+                          },
+                          child: Container(
+                            child: Image.asset("assets/images/goat.jpeg"),
                             width: 200,
                             height: 200,
                           ),
