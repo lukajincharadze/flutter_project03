@@ -26,10 +26,22 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  padding: EdgeInsets.only(top: 50),
+                  margin: EdgeInsets.only(top: 20, left: 15, right: 15),
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.blue.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 10,
+                        offset: Offset(0, 3),
+                      ),
+                    ],
+                  ),
                   child: Text(
                     'Tap Photos to get sound of them',
-                    style: TextStyle(fontSize: 27),
+                    style: TextStyle(fontSize: 24, color: Colors.white),
                   ),
                 ),
                 Row(
